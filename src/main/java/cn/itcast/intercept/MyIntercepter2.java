@@ -1,6 +1,5 @@
 package cn.itcast.intercept;
 
-import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -14,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * 参数：
  * 返回值：
  **/
-public class MyIntercepter1  implements HandlerInterceptor {
+public class MyIntercepter2 implements HandlerInterceptor {
 
 
     /**
@@ -28,7 +27,7 @@ public class MyIntercepter1  implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        System.out.println("MyIntercepter1 的 preHandle*******前*******  执行了");
+        System.out.println("MyIntercepter1 的 preHandle*******前22222*******  执行了");
         //  request.getRequestDispatcher("/WEB-INF/pages/error.jsp").forward(request,response);
 
 
@@ -47,7 +46,7 @@ public class MyIntercepter1  implements HandlerInterceptor {
      */
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("MyIntercepter1 的 postHandle*******后*******  执行了");
+        System.out.println("MyIntercepter1 的 postHandle*******后222222*******  执行了");
     }
 
 
@@ -61,6 +60,6 @@ public class MyIntercepter1  implements HandlerInterceptor {
      */
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("MyIntercepter1 的 postHandle*******最后*******  执行了");
+        System.out.println("MyIntercepter1 的 postHandle*******最后22222*******  执行了");
     }
 }

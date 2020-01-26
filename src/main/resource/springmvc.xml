@@ -34,6 +34,15 @@
             <!--配置拦截器-->
             <bean class="cn.itcast.intercept.MyIntercepter1"></bean>
         </mvc:interceptor>
+        <mvc:interceptor>
+            <!--要拦截的方法-->
+            <mvc:mapping path="/user/*"/>
+            <!--不用拦截的方法-->
+            <!--            <mvc:exclude-mapping path=""/>-->
+
+            <!--配置拦截器-->
+            <bean class="cn.itcast.intercept.MyIntercepter2"></bean>
+        </mvc:interceptor>
     </mvc:interceptors>
 
     <bean id="InternalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
